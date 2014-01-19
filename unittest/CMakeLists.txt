@@ -7,8 +7,11 @@ include_directories(
 add_executable(unittest
     testharness.cpp
     testhelper.cpp
+
+    PoolAllocTest.cpp
 )
 
 target_link_libraries(unittest
     ${CPPUNITLIB}
+    common
 )

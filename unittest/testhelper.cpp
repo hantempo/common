@@ -1,6 +1,6 @@
 #include <cppunit/config/SourcePrefix.h>
 
-//#include "memory_test.hpp"
+#include "PoolAllocTest.h"
 
 #define TEST(name) \
 /* Registers the fixture into the "all tests" registry */ \
@@ -10,4 +10,4 @@ static CPPUNIT_NS::AutoRegisterSuite<name> autoregister##name;\
 /* Registers the fixture into a registry containing this test suite only */ \
 CPPUNIT_TEST_SUITE_NAMED_REGISTRATION(name, #name);
 
-//TEST(MemoryTest)
+TEST(PoolAllocTest)

@@ -9,6 +9,18 @@ endif ()
 
 set (THIRDPARTY_INCLUDE_DIRS ${PROJECT_SOURCE_DIR}/thirdparty)
 
+include_directories (
+    include
+)
+
+#if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+    #include (platform/Linux)
+#else ()
+    #include (platform/Windows)
+#endif ()
+
+#include (source/CMakeLists.txt)
+add_subdirectory (source)
 add_subdirectory (unittest)
 
 #add_library (glslang SHARED
